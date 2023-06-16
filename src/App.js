@@ -2,7 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 const number = 5555;
-const person = { name: 'Hasib', job: 'Student', adress: 'khoksa', phone: 12344 }
+const person1 =   [{ name: 'Hasib', job: 'Student', adress: 'khoksa', phone: 12344 },
+                  { name: 'Prangon', job: 'web development learner', adress: 'khoksa', phone: 12345 },
+                  { name: 'Hasibul', job: 'Student', adress: 'khoksa', phone: 12344 },
+                  { name: 'Hasibul Hossain Prangon', job: 'Student', adress: 'khoksa', phone: 12344 }]
 
 const personStyle = {
   color: 'green',
@@ -10,7 +13,7 @@ const personStyle = {
 }
 
 function App() {
-  const persons=['Hasib', 'Prangon', 'Neasher', 'Maruf', 'Anik', 'Jim', 'Kabir', 'Sobir']
+  const persons = ['Hasib', 'Prangon', 'Neasher', 'Maruf', 'Anik', 'Jim', 'Kabir', 'Sobir']
   const professions = ['Student', 'Web developer', 'Students & Digital Marketer']
   return (
     <div className="App">
@@ -18,11 +21,15 @@ function App() {
         persons.map(person => <li>{person}</li>)
       }
 
-      {
+      {/* {
         persons.map(person => <Person name={person}></Person>)
-      }
+      } */}
+      {/* {
+        professions.map(pro => <Person profession={pro}></Person>)
+      } */}
+
       {
-      professions.map(pro => <Person profession={pro}></Person>)
+        person1.map(person => <Person name={person.name}></Person>)
       }
       {/* <Person name={persons[0]} Profession="Student" phone="01710792327"></Person>
       <Person name={persons[1]} Profession="Learner" phone="01566087557"></Person> */}
